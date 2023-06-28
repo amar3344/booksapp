@@ -32,7 +32,7 @@ export class Home extends Component<IProps,IState> {
     }
 
     knowMoreonEachBlog=(a:any)=>{
-        this.props.navigation?.navigate("EachBlog",{data:a})
+        this.props.navigation?.navigate("BlogDetails",{data:a})
     }
     
   render() {
@@ -43,7 +43,8 @@ export class Home extends Component<IProps,IState> {
             </View>
         ):(
             <View>
-                <FlatList data={this.state.dataList} 
+                <FlatList data={this.state.dataList}
+                keyExtractor={item => item.title}
                  renderItem={({item}) =>(
                     <View style={styles.eachBlog}>
                         <Text style={styles.headerText}>Title :{"  "}<Text style={styles.textTitle}>{item.title}</Text></Text>

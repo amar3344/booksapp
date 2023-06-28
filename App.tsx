@@ -15,7 +15,7 @@ export class App extends Component {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Blogs:" component={Home}/>
-          <Stack.Screen name="EachBlog" component={EachBlog}/>
+          <Stack.Screen name="BlogDetails" component={EachBlog}/>
         </Stack.Navigator>
       </NavigationContainer>
     )
